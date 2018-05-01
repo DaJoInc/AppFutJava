@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ownk.appfut.persistencia.dao.RegistroEq">
+	<select id="registro" statementType="CALLABLE" parameterType="java.util.Map">
+		{call US_QOQREQ.REGISTRO_EQUIPO(
+
+		#{p_Id_Usuario, jdbcType=NUMERIC, javaType=java.lang.String, mode=IN},
+		
+		#{p_Id_Equipo, jdbcType=NUMERIC, javaType=java.lang.String,mode=IN},
+		
+		#{p_Nombre_Equipo, jdbcType=VARCHAR, javaType=java.lang.String, mode=IN},
+		
+		#{p_Estado_Equipo, jdbcType=NUMERIC, javaType=java.lang.String, mode=IN},
+		
+		#{p_Id_Dt_Equipo, jdbcType=NUMERIC, javaType=java.lang.String, mode=IN},
+		
+		#{cod_respuesta, jdbcType=VARCHAR, javaType=java.lang.String,mode=OUT},
+		
+		#{msg_respuesta, jdbcType=VARCHAR, javaType=java.lang.String, mode=OUT}
+		)
+		}
+	</select>
+
+</mapper>

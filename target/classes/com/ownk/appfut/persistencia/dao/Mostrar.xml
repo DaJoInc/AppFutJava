@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ownk.appfut.persistencia.dao.Mostrar">
+	<select id="mostrar" statementType="CALLABLE" parameterType="java.util.Map">
+		{call US_QJGCON.MOSTRAR_CONVOCATORIA(
+
+		#{p_Id_Convocatoria, jdbcType=NUMERIC, javaType=java.lang.String, mode=OUT},
+		
+		#{p_Id_Equipo, jdbcType=NUMERIC, javaType=java.lang.String,mode=OUT},
+		
+		#{p_Nombre_Equipo, jdbcType=VARCHAR, javaType=java.lang.String, mode=OUT}
+	
+		)
+		}
+	</select>
+
+</mapper>

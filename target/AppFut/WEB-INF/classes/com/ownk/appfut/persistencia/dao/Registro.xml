@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ownk.appfut.persistencia.dao.Registro">
+	<select id="registro" statementType="CALLABLE" parameterType="java.util.Map">
+		{call US_QOQRU.REGISTRO_USUARIO(
+		
+		#{p_Id_Persona, jdbcType=NUMERIC, javaType=java.math.BigInteger, mode=IN},
+		
+		#{p_Nombre_Persona , jdbcType=VARCHAR, javaType=java.lang.String,
+		mode=IN},
+		
+		#{p_Apellido_Persona, jdbcType=VARCHAR, javaType=java.lang.String, mode=IN},
+		
+		#{p_Tipo_Documento , jdbcType=VARCHAR, javaType=java.lang.String,
+		mode=IN},
+		
+		#{p_Documento_Persona , jdbcType=NUMERIC, javaType=java.lang.Integer, mode=IN},
+		
+		#{p_Fecha_Nacimiento, jdbcType=DATE, javaType=java.util.Date,
+		mode=IN},
+		
+		#{p_Id_Usuario , jdbcType=NUMERIC, javaType=java.math.BigInteger, mode=IN},
+		
+		#{p_Nombre_Usuario, jdbcType=VARCHAR, javaType=java.lang.String,
+		mode=IN},
+		
+		#{p_Contrasena_Usuario, jdbcType=VARCHAR, javaType=java.lang.String, mode=IN},
+		
+		#{p_Estado , jdbcType=NUMERIC, javaType=java.lang.Integer, mode=IN},
+		
+		#{p_Id_Rol , jdbcType=VARCHAR, javaType=java.lang.Integer, mode=IN},
+		
+		#{cod_respuesta, jdbcType=VARCHAR, javaType=java.lang.String,
+		mode=OUT},
+		
+		#{msg_respuesta, jdbcType=VARCHAR, javaType=java.lang.String, mode=OUT}
+		)
+		}
+	</select>
+
+</mapper>

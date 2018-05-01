@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ownk.appfut.persistencia.dao.Ingreso">
+	<select id="ingreso" statementType="CALLABLE" parameterType="java.util.Map">
+		{call US_QINGS.INGRESO_USUARIO(
+
+		#{p_Nombre_Usuario, jdbcType=VARCHAR, javaType=java.lang.String, mode=IN},
+		
+		#{p_Contrasena_Usuario, jdbcType=VARCHAR, javaType=java.lang.String,mode=IN},
+		
+		#{cod_usuario, jdbcType=VARCHAR, javaType=java.lang.String, mode=OUT},
+		
+		#{cod_respuesta, jdbcType=VARCHAR, javaType=java.lang.String, mode=OUT},
+		
+		#{msg_respuesta, jdbcType=VARCHAR, javaType=java.lang.String,mode=OUT},
+		
+		#{r_Usuario, jdbcType=NUMERIC, javaType=java.lang.String, mode=OUT}
+		)
+		}
+	</select>
+
+</mapper>
