@@ -46,15 +46,13 @@
 							<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 								class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="${pageContext.request.contextPath}">AppFut<span class="logo-dec">Directivos</span></a>
+						<a class="navbar-brand" href="${pageContext.request.contextPath}/adm">AppFut<span class="logo-dec">Administrador</span></a>
 					</div>
 					<div class="collapse navbar-collapse" id="myNavbar">
 						<ul class="nav navbar-nav navbar-right">
 							<li class="active"><a href="${pageContext.request.contextPath}/adm">Inicio</a></li>
-							<li class=""><a href="${pageContext.request.contextPath}/registroequipo">Registro Equipo</a></li>
-							<li class=""><a href="${pageContext.request.contextPath}/registroconvocatoria">Registro Convocatoria</a></li>
-							<li class=""><a
-											href="${pageContext.request.contextPath}" onclick="eliminar()">Cerrar Sesion</a></li>
+				
+							<li class=""><a href="${pageContext.request.contextPath}" onclick="eliminar()">Cerrar Sesion</a></li>
 						</ul>
 					</div>
 				</div>

@@ -52,6 +52,8 @@
 		<mapper resource="com/ownk/appfut/persistencia/dao/RegistroEq.xml" />
 		<mapper resource="com/ownk/appfut/persistencia/dao/RegistroConv.xml" />
 		<mapper resource="com/ownk/appfut/persistencia/dao/Mostrar.xml" />
+		<mapper resource="com/ownk/appfut/persistencia/dao/RegistroTorneo.xml" />
+		
 
 
 	</mappers>

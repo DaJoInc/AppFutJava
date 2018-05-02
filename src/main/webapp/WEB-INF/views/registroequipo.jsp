@@ -209,14 +209,11 @@ fieldset {
 										<span class="icon-bar"></span> <span class="icon-bar"></span>
 										<span class="icon-bar"></span>
 									</button>
-									<a class="navbar-brand"
-										href="${pageContext.request.contextPath}">App<span
-										class="logo-dec">Fut</span></a>
-								</div>
+									
 								<div class="collapse navbar-collapse" id="myNavbar">
 									<ul class="nav navbar-nav navbar-right">
 										<li class="active"><a
-											href="${pageContext.request.contextPath}/adm">Inicio</a></li>
+											href="${pageContext.request.contextPath}/admdt">Inicio</a></li>
 							
 									<li class=""><a
 											href="${pageContext.request.contextPath}/registroconvocatoria">Registro Convocatoria</a></li>
@@ -241,10 +238,10 @@ fieldset {
 
 							<fieldset>
 
-								<span id="resultado"> </span> <br>
+								 <br>
 								<input type="text" name="apellido" id="apellidos"
 									ng-model="ctrl.userDto.idUsuario">
-
+									<span id="resultado"> </span>
 							</fieldset>
 
 							<fieldset>

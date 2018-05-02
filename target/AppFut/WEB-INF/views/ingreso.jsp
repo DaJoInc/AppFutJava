@@ -269,11 +269,11 @@ fieldset {
 													ng-value="r.idUsuario"> <br> <br>
 												<input type="text" name="apellido" id="apellidos"> <input
 													type="button" value="Seguir"
-													onclick="guardar(); javascript:location.href='${pageContext.request.contextPath}/adm/'">
+													onclick="guardar(); javascript:location.href='${pageContext.request.contextPath}/admdt/'">
 												<br>
 											<div id="resultado"></div>
 											</p>
-											</p>
+										
 
 											<p
 												ng-repeat="r in ctrl.userDto  | filter:{codUsuario:'JG'}:true">
@@ -283,10 +283,22 @@ fieldset {
 													ng-value="r.idUsuario"> <br>
 												<input type="text" name="apellido" id="apellidos"> <input
 													type="button" value="Seguir"
-													onclick="guardar(); javascript:location.href='${pageContext.request.contextPath}'">
+													onclick="guardar(); javascript:location.href='${pageContext.request.contextPath}/admjugador'">
 												<br>
 											<div id="resultado"></div>
 											</p>
+											
+											<p
+												ng-repeat="r in ctrl.userDto  | filter:{codUsuario:'AD'}:true">
+												<strong>{{r.msgRespuesta}}</strong> <strong>{{r.idUsuario}}</strong>
+												<strong>{{r.codUsuario}}</strong> Id Usuario: <input
+													type="text" name="nombre" id="nombre"
+													ng-value="r.idUsuario"> <br>
+												<input type="text" name="apellido" id="apellidos"> <input
+													type="button" value="Seguir"
+													onclick="guardar(); javascript:location.href='${pageContext.request.contextPath}/adm'">
+												<br>
+											<div id="resultado"></div>
 											</p>
 
 

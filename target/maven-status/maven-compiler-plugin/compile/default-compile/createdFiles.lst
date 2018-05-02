@@ -9,15 +9,18 @@ com\ownk\appfut\model\RegistroConvocatoria.class
 com\ownk\appfut\mapping\RegistroController.class
 com\ownk\appfut\model\RegistroEquipo.class
 com\ownk\appfut\model\IngresoUsuario.class
+com\ownk\appfut\persistencia\handlers\HandlerMostrarInfo.class
 com\ownk\appfut\controller\RegistroEquipoRestController.class
 com\ownk\appfut\model\RegistroPersona.class
 com\ownk\appfut\persistencia\dao\RegistroConv.class
 com\ownk\appfut\configuracion\AppInitializer.class
 com\ownk\appfut\persistencia\configuracion\DBManagerMyBatisApp.class
 com\ownk\appfut\mapping\PaginaController.class
+com\ownk\appfut\mapping\MostrarController.class
 com\ownk\appfut\mapping\RegistroEquipoController.class
 com\ownk\appfut\controller\GestionRegistroEquipoControllerDB.class
 com\ownk\appfut\controller\GestionIngresoUsuarioControllerDB.class
+com\ownk\appfut\mapping\ADController.class
 com\ownk\appfut\mapping\RegistroConvocatoriaController.class
 com\ownk\appfut\model\MostrarA.class
 com\ownk\appfut\controller\RegistroConvocatoriaRestController.class
@@ -27,5 +30,6 @@ com\ownk\appfut\persistencia\dao\Mostrar.class
 com\ownk\appfut\controller\IngresoUsuarioRestController.class
 com\ownk\appfut\controller\MostrarRestController.class
 com\ownk\appfut\controller\GestionRegistroControllerDB.class
+com\ownk\appfut\mapping\JGController.class
 com\ownk\appfut\model\ConsultaAgenda.class
 com\ownk\appfut\persistencia\dao\RegistroEq.class
