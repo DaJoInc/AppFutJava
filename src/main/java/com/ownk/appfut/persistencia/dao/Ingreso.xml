@@ -5,9 +5,9 @@
 	<select id="ingreso" statementType="CALLABLE" parameterType="java.util.Map">
 		{call US_QINGS.INGRESO_USUARIO(
 
-		#{p_Id_Torne, jdbcType=VARCHAR, javaType=java.lang.String, mode=IN},
+		#{p_Nombre_Usuario, jdbcType=VARCHAR, javaType=java.lang.String, mode=IN},
 		
-		#{p_Nombre_Torneo, jdbcType=VARCHAR, javaType=java.lang.String,mode=IN},
+		#{p_Contrasena_Usuario, jdbcType=VARCHAR, javaType=java.lang.String,mode=IN},
 		
 		#{cod_usuario, jdbcType=VARCHAR, javaType=java.lang.String, mode=OUT},
 		
