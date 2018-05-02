@@ -9,14 +9,4 @@
 		)
 		}
 	</select>
-
-
-
-	<select id = "getAll"  resultType="com.ownk.appfut.model.MostrarA">
-   		SELECT EQ_CVCT.CVCT_CVCT AS idConvocatoria,
-               EQ_CVCT.CVCT_EQPO AS idEquipo,
-               EQ_EQPO.EQPO_NBEQ AS nombreEquipo
-		FROM EQ_CVCT
-		INNER JOIN EQ_EQPO ON EQ_CVCT.CVCT_EQPO = EQ_EQPO.EQPO_EQPO
-	</select>
 </mapper>

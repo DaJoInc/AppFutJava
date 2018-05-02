@@ -63,9 +63,8 @@ public class GestionMostrarControllerDB {
 			 * ************************************************* 
 			 */
 	
-			respuestaPlsql = dao.getAll();
-			
-			//respuestaPlsql = (List<MostrarA>) parametrosInOout.get("p_Lista_Convocatorias");
+			dao.mostrar(parametrosInOout);
+			respuestaPlsql = (List<MostrarA>) parametrosInOout.get("p_Lista_Convocatorias");
 
 			
 			if (respuestaPlsql!=null && !respuestaPlsql.isEmpty()) {
