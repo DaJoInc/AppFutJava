@@ -62,11 +62,12 @@ public class GestionMostrarControllerDB {
 			 * la API 
 			 * ************************************************* 
 			 */
-		
-			dao.mostrar(parametrosInOout);
-			respuestaPlsql = (List<MostrarA>) parametrosInOout.get("p_Lista_Convocatorias");
+	
+			respuestaPlsql = dao.getAll();
+			
+			//respuestaPlsql = (List<MostrarA>) parametrosInOout.get("p_Lista_Convocatorias");
 
-		
+			
 			if (respuestaPlsql!=null && !respuestaPlsql.isEmpty()) {
 				
 				return respuestaPlsql;
@@ -75,6 +76,7 @@ public class GestionMostrarControllerDB {
 
 
 		}catch (Exception e) {
+			System.out.println(e);
 			
 		}finally {
 			session.close();
