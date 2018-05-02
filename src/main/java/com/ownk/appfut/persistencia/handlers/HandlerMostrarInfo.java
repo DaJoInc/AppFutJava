@@ -1,6 +1,6 @@
 package com.ownk.appfut.persistencia.handlers;
 
-import java.math.BigInteger;
+import java.math.BigDecimal;
 import java.sql.CallableStatement;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -30,7 +30,7 @@ public class HandlerMostrarInfo implements TypeHandler<Object> {
 	  public Object getResult(CallableStatement cs, int columnIndex) throws SQLException {
 		  List<MostrarA> lista = new ArrayList<MostrarA>();
 		  Object[] structArray = null;
-		  BigInteger valor = null;
+		  BigDecimal valor = null;
 		  Object[] structAttr;
 		  java.sql.Struct mystruct = null;
 		  MostrarA solicitudMostrarEquipo = null;
@@ -44,14 +44,14 @@ public class HandlerMostrarInfo implements TypeHandler<Object> {
 					  structAttr = mystruct.getAttributes();
 					  
 					  try{
-						  BigInteger big = (BigInteger) structAttr[0];
+						  BigDecimal big = (BigDecimal) structAttr[0];
 						  valor = big;
 					  } catch (Exception e) {
 						  valor = null;
 					  }
 					  solicitudMostrarEquipo.setIdConvocatoria(valor);
 					  try{
-						  BigInteger big = (BigInteger) structAttr[1];
+						  BigDecimal big = (BigDecimal) structAttr[1];
 						  valor = big;
 					  } catch (Exception e) {
 						  valor = null;

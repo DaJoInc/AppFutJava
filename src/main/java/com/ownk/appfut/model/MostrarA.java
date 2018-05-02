@@ -1,24 +1,24 @@
 package com.ownk.appfut.model;
 
-import java.math.BigInteger;
+import java.math.BigDecimal;
 
 public class MostrarA {
 	
-	private	BigInteger	    idConvocatoria;
-	private BigInteger	    idEquipo;
+	private	BigDecimal	    idConvocatoria;
+	private BigDecimal	    idEquipo;
 	private	String		nombreEquipo;
 
 	
-	public BigInteger getIdConvocatoria() {
+	public BigDecimal getIdConvocatoria() {
 		return idConvocatoria;
 	}
-	public void setIdConvocatoria(BigInteger idConvocatoria) {
+	public void setIdConvocatoria(BigDecimal idConvocatoria) {
 		this.idConvocatoria = idConvocatoria;
 	}
-	public BigInteger getIdEquipo() {
+	public BigDecimal getIdEquipo() {
 		return idEquipo;
 	}
-	public void setIdEquipo(BigInteger idEquipo) {
+	public void setIdEquipo(BigDecimal idEquipo) {
 		this.idEquipo = idEquipo;
 	}
 	public String getNombreEquipo() {
