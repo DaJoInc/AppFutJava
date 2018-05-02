@@ -17,16 +17,13 @@ import com.ownk.appfut.model.MostrarA;
 public class MostrarRestController {
 	
 	@RequestMapping(value = "/in/", method = RequestMethod.GET)
-
-    public ResponseEntity<List<MostrarA>> listAllUsers(MostrarA mostrarA, UriComponentsBuilder ucBuilder) {
+    public ResponseEntity<List<MostrarA>> listAllUsers() {
         List<MostrarA> mostrarAs = new ArrayList<MostrarA>();
         MostrarA metodo  = null;
         GestionMostrarControllerDB gestionIngresoUsuarioControllerDB = new GestionMostrarControllerDB();
 
-        metodo = gestionIngresoUsuarioControllerDB.registro(mostrarA.getIdConvocatoria(),mostrarA.getIdEquipo(),mostrarA.getNombreEquipo());
-			if (metodo!= null) {
-				mostrarAs.add(metodo);
-			}
+        mostrarAs = gestionIngresoUsuarioControllerDB.registro();
+
 
         if(mostrarAs.isEmpty()){
             return new ResponseEntity<List<MostrarA>>(HttpStatus.NO_CONTENT);//You many decide to return HttpStatus.NOT_FOUND

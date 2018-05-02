@@ -1,6 +1,7 @@
 package com.ownk.appfut.controller;
 
 import java.util.HashMap;
+import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
@@ -11,7 +12,8 @@ import com.ownk.appfut.persistencia.dao.Mostrar;
 
 public class GestionMostrarControllerDB {
 	
-	public MostrarA registro(String idConvocatoria,String idEquipo,String nombreEquipo) {
+	@SuppressWarnings("unchecked")
+	public List<MostrarA> registro() {
 
 
 		/*
@@ -20,12 +22,11 @@ public class GestionMostrarControllerDB {
 		 * en el medoto.
 		 * ************************************************* 
 		 */
-		MostrarA registro = new MostrarA();
 
 		HashMap<Object, Object> parametrosInOout = new HashMap<Object, Object>();
 		SqlSession session = null;
 		Mostrar dao = null;
-		
+		List<MostrarA> respuestaPlsql = null;
 		
 		String setCodRespuesta;
 		String setMsgRespuesta;
@@ -61,23 +62,14 @@ public class GestionMostrarControllerDB {
 			 * la API 
 			 * ************************************************* 
 			 */
-			
-			parametrosInOout.put("p_Id_Convocatoria",null );
-			parametrosInOout.put("p_Id_Equipo", null);
-			parametrosInOout.put("p_Nombre_Equipo", null);
 		
-			
 			dao.mostrar(parametrosInOout);
-			
-			idConvocatoria=(String) parametrosInOout.get("p_Id_Convocatoria");
-			idEquipo=(String) parametrosInOout.get("p_Id_Equipo");
-			nombreEquipo=(String) parametrosInOout.get("p_Nombre_Equipo");
+			respuestaPlsql = (List<MostrarA>) parametrosInOout.get("p_Lista_Convocatorias");
+
 		
-			if (idConvocatoria!=null) {
+			if (respuestaPlsql!=null && !respuestaPlsql.isEmpty()) {
 				
-					registro.setIdConvocatoria(idConvocatoria);
-					registro.setIdEquipo(idEquipo);
-					registro.setNombreEquipo(nombreEquipo);
+				return respuestaPlsql;
 				
 			}
 
@@ -88,7 +80,7 @@ public class GestionMostrarControllerDB {
 			session.close();
 		}
 
-		return registro;
+		return null;
 
 	}
 

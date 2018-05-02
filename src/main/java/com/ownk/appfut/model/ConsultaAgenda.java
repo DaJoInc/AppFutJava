@@ -18,6 +18,7 @@ public class ConsultaAgenda {
 	            "jdbc:oracle:thin:@127.0.0.1:1521:XE", "OW_JST_US", "OW_JST_US");
 	         Statement st = conexion.createStatement();
 	         ResultSet rs = st.executeQuery("select * from EQ_CVCT" );
+	         /*
 	         while (rs.next())
 	         {
 	        	 MostrarA contacto = new MostrarA();
@@ -27,6 +28,7 @@ public class ConsultaAgenda {
 	         
 	            listaContactos.add(contacto);
 	         }
+	         */
 	         rs.close();
 	         st.close();
 	         conexion.close();

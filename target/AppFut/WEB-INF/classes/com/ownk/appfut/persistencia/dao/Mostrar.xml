@@ -5,12 +5,7 @@
 	<select id="mostrar" statementType="CALLABLE" parameterType="java.util.Map">
 		{call US_QJGCON.MOSTRAR_CONVOCATORIA(
 
-		#{p_Id_Convocatoria, jdbcType=NUMERIC, javaType=java.lang.String, mode=OUT},
-		
-		#{p_Id_Equipo, jdbcType=NUMERIC, javaType=java.lang.String,mode=OUT},
-		
-		#{p_Nombre_Equipo, jdbcType=VARCHAR, javaType=java.lang.String, mode=OUT}
-	
+		#{p_Lista_Convocatorias,          javaType=Object,  jdbcType=ARRAY, jdbcTypeName=TT_LTCV, mode=OUT, typeHandler=com.ownk.appfut.persistencia.handlers.HandlerMostrarInfo}
 		)
 		}
 	</select>

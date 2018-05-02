@@ -27,4 +27,5 @@ com\ownk\appfut\persistencia\dao\Mostrar.class
 com\ownk\appfut\controller\IngresoUsuarioRestController.class
 com\ownk\appfut\controller\MostrarRestController.class
 com\ownk\appfut\controller\GestionRegistroControllerDB.class
+com\ownk\appfut\model\ConsultaAgenda.class
 com\ownk\appfut\persistencia\dao\RegistroEq.class
